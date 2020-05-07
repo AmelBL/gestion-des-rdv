@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.principale_ctrl">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="anchorPRINCIPAL" prefHeight="475.0" prefWidth="853.0" style="-fx-background-color: #aaffff;">
+         <children>
+            <ScrollPane layoutX="240.0" layoutY="125.0" prefHeight="304.0" prefWidth="462.0">
+                  <AnchorPane fx:id="anchorAFFICHAGE" prefHeight="304.0" prefWidth="462.0" style="-fx-border-color: #ffffff;" />
+            </ScrollPane>
+            <Label layoutX="240.0" layoutY="24.0" prefHeight="70.0" prefWidth="462.0" text="Gestion des rendez-vous">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="ajouterrdv" layoutX="720.0" layoutY="195.0" onAction="#ajouter_rdv" style="-fx-background-color: #ffffff;" text="Ajouter rendez-vous" />
+            <JFXButton fx:id="ajouterpatient" layoutX="732.0" layoutY="147.0" onAction="#ajouter_patient" style="-fx-background-color: #ffffff;" text="Ajouter patient" />
+            <Label fx:id="labdate" layoutX="61.0" layoutY="66.0" prefHeight="28.0" prefWidth="105.0" />
+            <JFXButton fx:id="img" layoutX="17.0" layoutY="407.0" onAction="#miseAJ" prefHeight="44.0" prefWidth="205.0" style="-fx-background-color: #44a6bf; -fx-padding: 5;" text="Mise à jour la liste des rendez-vous" />
+            <ScrollPane layoutX="17.0" layoutY="99.0" prefHeight="304.0" prefWidth="205.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="rdvJOUR" layoutX="-2.0" layoutY="-1.0" prefHeight="289.0" prefWidth="205.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label fx:id="erreur" layoutX="238.0" layoutY="432.0" prefHeight="28.0" prefWidth="462.0" textFill="RED" />
+            <JFXButton fx:id="chercherpatient" layoutX="721.0" layoutY="238.0" onAction="#chercher_patient" style="-fx-background-color: #ffffff;" text="Chercher un patient?" />
+            <JFXButton fx:id="chercherRDV" layoutX="712.0" layoutY="279.0" onAction="#chercher_rdv" style="-fx-background-color: #ffffff;" text="Consulter un rendez-vous" />
+            <JFXButton fx:id="chercher_jour" layoutX="717.0" layoutY="322.0" onAction="#chercher_rdv_jour" style="-fx-background-color: #ffffff;" text="chercher RDV du jour" />
+            <Label layoutX="21.0" layoutY="28.0" prefHeight="44.0" prefWidth="186.0" text="Les rendez-vous d'aujourd'hui:" />
+            <Label fx:id="titre" layoutX="240.0" layoutY="99.0" prefHeight="25.0" prefWidth="462.0" text="titre" textFill="#44a6bf">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
